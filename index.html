@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container mx-auto relative">
+      <!--navbar-->
+      <div class="navbar flex justify-between items-center p-4 ">
+        <div class="flex justify-center items-center md:order-2">
+
+          <div class="hamburger inline-block p-4 cursor-pointer md:hidden" id="hamburger">
+            <div class="line h-0.5 w-6 my-1 bg-black"></div>
+            <div class="line h-0.5 w-6 my-1 bg-black"></div>
+            <div class="line h-0.5 w-6 my-1 bg-black"></div>
+          </div>
+
+          <div class="search md:hidden">
+            <a href="#">
+              <img
+                src="assets/search.svg"
+                alt=""
+                class="search-icon w-4 text-color-"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="logo flex text-center md:order-1 ">
+          <div class="px-4 w-32"><img src="images/microsoft.png" alt="" /></div>
+
+          <div
+            class="features bg-grey-500 md:bg-white w-full md:w-auto absolute md:static top-20 inset-x-0 flex flex-col items-start p-2 md:p-0 md:flex-row -translate-x-[100%] md:translate-x-0 
+            bg-[#f2f2f2] gap-x-10" id="nav-features"
+          >
+            <div class="fitem"><a href="" class="hover:border-b-2 hover:border-black">Microsoft 365</a></div>
+            <div class="fitem"><a href="" class="hover:border-b-2 hover:border-black">Teams</a></div>
+            <div class="fitem"><a href="" class="hover:border-b-2 hover:border-black">Windows</a></div>
+            <div class="fitem"><a href="" class="hover:border-b-2 hover:border-black">Surface</a></div>
+            <div class="fitem"><a href="" class="hover:border-b-2 hover:border-black">Xbox</a></div>
+            <div class="fitem"><a href="" class="hover:border-b-2 hover:border-black">Support</a></div>
+          </div>
+        </div>
+
+        <div class="cart text-center md:order-3 flex items-center md:space-x-2 lg:pl-4">
+          <div class="dropdown relative hidden lg:block">
+            <button class="flex justify-center items-center focus:border-dashed" id="dropdown-btn">
+              <p class="border-b-2 border-transparent hover:border-b-2 hover:border-black">All Microsoft</p>
+              <span class="p-2">
+                <svg class="w-4 mt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                </svg>
+              </span>
+         
+            </button>
+            <div class="absolute top-full w-fit -right-10 bg-[#f2f2f2] mt-1 border border-gray-200 hidden" id="dropdown-content">
+              <div class="flex p-5 space-x-6 text-sm text-left">
+                <div class="drop-list w-40">
+                  <h3 class="text-sm font-medium">Software</h3>
+                  <ul class="flex flex-col space-y-5 mt-5">
+                    <li class="hover:underline"><a href="">Windows Apps</a></li>
+                    <li class="hover:underline"><a href="">One Dirve</a></li>
+                    <li class="hover:underline"><a href="">Outlook</a></li>
+                    <li class="hover:underline"><a href="">Skype</a></li>
+                    <li class="hover:underline"><a href="">OneNote</a></li>
+                    <li class="hover:underline"><a href="">Microsoft Teams</a></li>
+                  </ul>
+                </div>
+                <div class="drop-list w-40">
+                  <h3 class="text-sm font-medium">PC and Devices</h3>
+                  <ul class="flex flex-col space-y-5 mt-5">
+                    <li class="hover:underline"><a href="">Shop Xbox</a></li>
+                    <li class="hover:underline"><a href="">Accessories</a></li>
+                  </ul>
+                </div>
+                <div class="drop-list w-40">
+                 <h3 class="text-sm font-medium">Entertainment</h3>
+                 <ul class="flex flex-col space-y-5 mt-5">
+                   <li class="hover:underline"><a href="">Xbox Games</a></li>
+                   <li class="hover:underline"><a href="">PC Games</a></li>
+                   <li class="hover:underline"><a href="">Windows digital games</a></li>
+                 </ul>
+                </div>
+                <div class="drop-list w-40">
+                 <h3 class="text-sm font-medium">Business</h3>
+                 <ul class="flex flex-col space-y-5 mt-5">
+                   <li class="hover:underline"><a href="">Microsoft Cloud</a></li>
+                   <li class="hover:underline"><a href="">Microsoft Security</a></li>
+                   <li class="hover:underline"><a href="">Azure</a></li>
+                   <li class="hover:underline"><a href="">Dynamics 365</a></li>
+                   <li class="hover:underline"><a href="">Microsoft 365 for business</a></li>
+                   <li class="hover:underline"><a href="">Microsoft Industry</a></li>
+                   <li class="hover:underline"><a href="">Microsoft Power Platform</a></li>
+                   <li class="hover:underline"><a href="">Windows 365</a></li>
+                 </ul>
+                </div>
+                <div class="drop-list w-40">
+                 <h3 class="text-sm font-medium">Developer & IT</h3>
+                 <ul class="flex flex-col space-y-5 mt-5">
+                   <li class="hover:underline"><a href="">Developer Center</a></li>
+                   <li class="hover:underline"><a href="">Documentation</a></li>
+                   <li class="hover:underline"><a href="">Microsoft Learn</a></li>
+                   <li class="hover:underline"><a href="">Microsoft Tech Community</a></li>
+                   <li class="hover:underline"><a href="">Azure Marketplace</a></li>
+                   <li class="hover:underline"><a href="">AppSource</a></li>
+                   <li class="hover:underline"><a href="">Visual Studio</a></li>
+                 </ul>
+                </div>
+                <div class="drop-list w-40">
+                 <h3 class="text-sm font-medium">Other</h3>
+                 <ul class="flex flex-col space-y-5 mt-5">
+                   <li class="hover:underline"><a href="">Free downlaods and security</a></li>
+                   <li class="hover:underline"><a href="">Education</li>
+                 </ul>
+                </div>
+              </div>
+              <div class="bottom-link flex justify-center items-center bg-[#e6e6e6] w-full border-b-2 border-black py-2">
+                <p class="hover:underline uppercase text-sm"><a href="#">View sitemap</a></p>
+                <span class="">
+                  <!-- <img src="images/next.png" alt="" class="w-4"> -->
+                  <svg
+                  class="w-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  class="w-5 h-5 card-links-svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                </span>
+              </div>
+             </div>
+
+          </div>
+          <div class="search hidden md:block">
+            <a href="#">
+              <img
+                src="assets/search.svg"
+                alt=""
+                class="search-icon w-4 mt-1"
+              />
+            </a>
+          </div>
+
+          <div>
+            <a href="#"><img src="assets/cart.svg" alt="" class="cart-icon mt-1 mx-1" /></a>
+          </div>
+          <div class="sign-in">
+            <span><a href="#"><img src="images/icons8-login-32.png" alt="" class="w-6"></a></span>
+          </div>
+        </div>
+      </div>
+
+      <!--slider-->
+      <div class="slider bg-[#ebebeb] flex flex-col-reverse md:flex-row">
+        <div
+          class="left flex flex-col justify-center items-center md:items-baseline py-12"
+        >
+          <h1 class="text-2xl md:text-4xl font-medium mx-5">
+            Surface laptop 4
+          </h1>
+          <p class="w-3/4 mx-5 text-center md:text-left md:mt-1">
+            Premium Office apps, extra cloud storage, advanced security, and
+            more – all in one convenient subscription
+          </p>
+          <button class="text-white bg-black px-4 py-2 my-6 mx-5 font-bold">
+            Shop Now >
+          </button>
+        </div>
+        <div class="right">
+          <img
+            src="images/laptop1.jpg"
+            alt=""
+            class="w-[20rem] md:w-[30rem] mx-auto md:mr-24 mt-5"
+          />
+        </div>
+      </div>
+
+      <!--promo section-->
+      <div
+        class="promo flex flex-col md:flex-row items-center justify-center space-y-8 md:space-x-8 mt-10"
+      >
+        <div class="item flex flex-col space-y-2 items-center mt-8">
+          <img src="images/ic1.webp" alt="" class="w-10" />
+          <span class="underline text-blue-600 font-medium"
+            ><a href="">Choose your Microsoft 365</a></span
+          >
+        </div>
+        <div class="item flex flex-col space-y-2 items-center">
+          <img src="images/ic2.webp" alt="" class="w-10" />
+          <span class="underline text-blue-600 font-medium"
+            ><a href="">Explore Surface devices</a></span
+          >
+        </div>
+        <div class="item flex flex-col space-y-2 items-center">
+          <img src="images/ic3.webp" alt="" class="w-10" />
+          <span class="underline text-blue-600 font-medium"
+            ><a href="">Buy Xbox games</a></span
+          >
+        </div>
+        <div class="item flex flex-col space-y-2 items-center">
+          <img src="images/ic1.webp" alt="" class="w-10" />
+          <span class="underline text-blue-600 font-medium"
+            ><a href="">Get Windows 11</a></span
+          >
+        </div>
+      </div>
+
+      <!--cards wrapper offer1-->
+      <div
+        class="offers-1 grid justify-items-center gap-5 overflow-hidden grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 mt-10"
+      >
+        <!--cards offer-1-->
+        <div class="card">
+          <img src="images/of1-1.webp" alt="" class="card-image" />
+          <h2 class="text-2xl font-medium">Microsoft 365</h2>
+          <p class="card-desc">
+            Premium Office apps, extra cloud storage, advanced security, and
+            more – all in one convenient subscription.
+          </p>
+
+          <span>
+            <a href="" class="card-links flex">
+              <span class="inline">For 1 person</span>
+              <svg
+                class="w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 card-links-svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </span>
+
+          <span>
+            <a href="" class="card-links flex">
+              <span class="inline">For up to 6 people</span>
+              <svg
+                class="w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 card-links-svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </span>
+        </div>
+
+        <div class="card">
+          <img src="images/of1-2.avif" alt="" class="card-image" />
+          <h2 class="text-2xl font-medium">Microsoft Edge</h2>
+          <p class="card-desc">
+            World-class performance with more privacy, more productivity and
+            more value while you browse.
+          </p>
+          <span>
+            <a href="" class="card-links flex">
+              <span class="inline">Download Now</span>
+              <svg
+                class="w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 card-links-svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </span>
+        </div>
+
+        <div class="card">
+          <img src="images/of1-3.webp" alt="" class="card-image" />
+          <h2 class="text-2xl font-medium">Microsoft OneDrive</h2>
+          <p class="card-desc">
+            Save your files and photos to OneDrive and access them from any
+            device, anywhere.
+          </p>
+          <span>
+            <a href="" class="card-links flex">
+              <span class="inline">Learn more</span>
+              <svg
+                class="w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 card-links-svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </span>
+        </div>
+
+        <div class="card">
+          <img src="images/of1-4.webp" alt="" class="card-image" />
+          <h2 class="text-2xl font-medium">One Note</h2>
+          <p class="card-desc">Organise your notes and your life.</p>
+          <span>
+            <a href="" class="card-links flex">
+              <span class="inline"> Learn more </span>
+              <svg
+                class="w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 card-links-svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+
+      <!--Download section-->
+      <div class="download-section flex flex-col-reverse lg:flex-row justify-center items-center bg-[#e6e6e6] w-full xl:justify-around">
+        <div class="left bg-white lg:bg-[#e6e6e6]  w-full lg:w-96 h-full pt-10 px-5 relative md:flex md:justify-center lg:h-full lg:mb-10">
+         
+          <div class="left-card  flex flex-col space-y-4 md:shadow-xl lg:shadow-none md:p-10 lg:p-0 md:w-[97%] lg:w-auto md:h-48 lg:h-auto md:absolute md:-top-8 bg-white lg:bg-[#e6e6e6]">
+
+            <h2 class="text-3xl font-medium">Outlook for iOS and Android</h2>
+            <p>Connect. Organize. Get things done.</p>
+            <button class="w-fit bg-blue-700 text-md text-white px-2 py-2 rounded-sm hover:bg-blue-800">Download Now</button>
+
+          </div>
+        </div>
+
+        <div class="right bg-[#e6e6e6] w-96 lg:w-2/4 lg:flex lg:flex-col lg:justify-items-end lg:h-full lg:pt-20">
+          <img src="images/download.avif" alt="" class="w-96 lg:w-full">
+        </div>
+      </div>
+
+      <!--business cards offer2-->
+      <div class="business-cards-wrapper">
+        <h2 class="text-3xl font-medium md:mt-36 ml-5 pt-20 lg:mt-20 lg:pt-0">For Business</h2>
+        <div
+        class="offers-2 grid justify-items-center gap-5 overflow-hidden grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 mt-10"
+      >
+      
+        <!--cards offer-2-->
+        <div class="card">
+          <img src="images/offers-2-1.webp" alt="" class="card-image" />
+          <h2 class="text-2xl font-medium">Welcome to your Windows 365 Cloud PC</h2>
+          <p class="card-desc">
+          Securely stream your Windows experience from the Microsoft cloud to any device.
+          </p>
+
+          <span>
+            <a href="" class="card-links flex">
+              <span class="inline">Get it today</span>
+              <svg
+                class="w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 card-links-svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </span>
+
+        </div>
+
+        <div class="card">
+          <img src="images/offers-2-2.webp" alt="" class="card-image" />
+          <h2 class="text-2xl font-medium">Microsoft 365 for business</h2>
+          <p class="card-desc">
+          Stay a step ahead with powerful apps for productivity, connection and security.
+          </p>
+          <span>
+            <a href="" class="card-links flex">
+              <span class="inline">Shop Now</span>
+              <svg
+                class="w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 card-links-svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </span>
+        </div>
+
+        <div class="card">
+          <img src="images/offers-2-3.avif" alt="" class="card-image" />
+          <h2 class="text-2xl font-medium">Microsoft Viva</h2>
+          <p class="card-desc">
+          Discover the employee experience platform designed to help people connect, focus, learn and thrive at work
+          </p>
+          <span>
+            <a href="" class="card-links flex">
+              <span class="inline">Learn more</span>
+              <svg
+                class="w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 card-links-svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </span>
+        </div>
+
+        <div class="card">
+          <img src="images/offers-2-4.webp" alt="" class="card-image" />
+          <h2 class="text-2xl font-medium">Get Microsoft Teams for free</h2>
+          <p class="card-desc">Online meetings, chat and shared cloud storage – all in one place.</p>
+          <span>
+            <a href="" class="card-links flex">
+              <span class="inline">Sign up for free</span>
+              <svg
+                class="w-7"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                class="w-5 h-5 card-links-svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+      </div>
+
+      <!--socials-->
+      <div class="socials flex flex-col sm:flex-row gap-4 pl-5 pt-5">
+        <p class="text-md">Follow Microsoft</p>
+        <span class="flex gap-4">
+          <a href="" class="facebook"><img src="images/icons8-facebook-f.svg" alt="" class="w-6 mt-0.5"></a>
+          <a href="" class="twitter"><img src="images/icons8-twitter.svg" alt="" class="w-7"></a>
+          <a href="" class="linkedin"><img src="images/icons8-linkedin.svg" alt=""></a>
+        </span>
+
+      </div>
+
+      <!--footer-->
+      <div class="footer bg-[#f2f2f2] mt-20">
+        <div class="footer-items grid gap-5 grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 py-8 px-16">
+          <div class="footer-list">
+            <h3 class="font-medium text-md mb-5 text-[#616161]">Microsoft Store</h3>
+            <ul class="text-xs text-[#616161] flex flex-col gap-4">
+              <li><a href="" class="hover:underline">Account Profile</a></li>
+              <li><a href="" class="hover:underline">Download Center</a></li>
+              <li><a href="" class="hover:underline">Returns</a></li>
+              <li><a href="" class="hover:underline">Order Tracking</a></li>
+            </ul>
+          </div>
+            <div class="footer-list">
+              <h3 class="font-medium text-md mb-5 text-[#616161]">Education</h3>
+              <ul class="text-xs text-[#616161] flex flex-col gap-4">
+                <li><a href="" class="hover:underline">Microsoft in education</a></li>
+                <li><a href="" class="hover:underline">Devices for education</a></li>
+                <li><a href="" class="hover:underline">MIcrosoft teams for education</a></li>
+                <li><a href="" class="hover:underline">Microsoft 365 education</a></li>
+                <li><a href="" class="hover:underline">Office education</a></li>
+                <li><a href="" class="hover:underline">Educator training and development</a></li>
+                <li><a href="" class="hover:underline">Deals for students and parents</a></li>
+                <li><a href="" class="hover:underline">Azure for students</a></li>
+              </ul>
+            </div>
+            <div class="footer-list">
+              <h3 class="font-medium text-md mb-5 text-[#616161]">Business</h3>
+              <ul class="text-xs text-[#616161] flex flex-col gap-4">
+                <li><a href="" class="hover:underline">Microsoft cloud</a></li>
+                <li><a href="" class="hover:underline">Microsoft security</a></li>
+                <li><a href="" class="hover:underline">Azure</a></li>
+                <li><a href="" class="hover:underline">Dynamics 365</a></li>
+                <li><a href="" class="hover:underline">Microsoft 365</a></li>
+                <li><a href="" class="hover:underline">Microsoft Advertising</a></li>
+                <li><a href="" class="hover:underline">Microsoft Industry</a></li>
+                <li><a href="" class="hover:underline">Microsoft Teams</a></li>
+              </ul>
+            </div>
+            <div class="footer-list">
+              <h3 class="font-medium text-md mb-5 text-[#616161]">Developer & IT</h3>
+              <ul class="text-xs text-[#616161] flex flex-col gap-4">
+                <li><a href="" class="hover:underline">Developer Center</a></li>
+                <li><a href="" class="hover:underline">Documentation</a></li>
+                <li><a href="" class="hover:underline">MIcrosoft Learn</a></li>
+                <li><a href="" class="hover:underline">Microsoft Tech Community</a></li>
+                <li><a href="" class="hover:underline">Azure Marketplace</a></li>
+                <li><a href="" class="hover:underline">AppSource</a></li>
+                <li><a href="" class="hover:underline">Microsoft Power Platform</a></li>
+                <li><a href="" class="hover:underline">Microsoft Visual Studio</a></li>
+              </ul>
+            </div>
+           <div class="footer-list">
+            <h3 class="font-medium text-md mb-5 text-[#616161]">Company</h3>
+            <ul class="text-xs text-[#616161] flex flex-col gap-4">
+              <li><a href="" class="hover:underline">Careers</a></li>
+              <li><a href="" class="hover:underline">About Microsoft</a></li>
+              <li><a href="" class="hover:underline">Company news</a></li>
+              <li><a href="" class="hover:underline">Privacy at Microsoft</a></li>
+              <li><a href="" class="hover:underline">Investors</a></li>
+              <li><a href="" class="hover:underline">Sustainability</a></li>
+            </ul>
+           </div>
+        </div>
+        <div class="footer-lower grid grid-cols-1 md:grid-cols-2 gap-y-4 md:gap-y-0 py-8 px-16 text-xs text-[#616161]">
+          <span>
+            <img src="images/icons8-europe-32.png" alt="" class="inline w-6">
+            <a href="" class="hover:underline">English (Pakistan)</a>
+          </span>
+        
+          <ul class="flex flex-wrap md:justify-end justify-start gap-4">
+            <li><a href="" class="hover:underline">Contact Microsoft</a></li>
+            <li><a href="" class="hover:underline">Privacy</a></li>
+            <li><a href="" class="hover:underline">Terms of use</a></li>
+            <li><a href="" class="hover:underline">Trademarks</a></li>
+            <li><a href="" class="hover:underline">About our ads</a></li>
+            <li>&copy;Microsoft 2022</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

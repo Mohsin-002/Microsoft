@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .card {
+        @apply 
+        flex flex-col space-y-4 h-full overflow-hidden p-5 w-full hover:cursor-pointer
+    }
+
+    .card-desc{
+        @apply 
+        whitespace-normal
+    }
+
+    .card-image{
+        @apply
+        w-full
+    }
+
+    .card-links{
+        @apply
+        text-blue-700 font-medium hover:underline 
+    }
+
+    .card-links-svg{
+        @apply
+        transform hover:translate-x-10
+    }
+}
